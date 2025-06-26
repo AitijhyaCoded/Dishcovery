@@ -42,7 +42,7 @@ src/
 │   ├── RecipeList.jsx
 │   ├── RecipeCard.jsx
 │   ├── RecipeDetail.jsx
-│   └── Loader.jsx
+│   ├── Loader.jsx
 │   └── ErrorMessage.jsx
 ```
 
