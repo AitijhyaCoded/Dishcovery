@@ -13,7 +13,7 @@ const SearchBar = ({ handleSearch }) => {
         placeholder="Search"
         className="px-5 py-2 w-1/2 rounded-full focus:outline-none focus:ring-2 focus:ring-yellow-400 bg-yellowTheme text-gray-700"
         onKeyDown={(e) => {
-          if (e.key === 'Enter') handleSearch(query); // optional: search on Enter key
+          if (e.key === 'Enter') handleSearch(query); 
         }}
       />
       <button

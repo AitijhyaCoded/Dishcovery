@@ -5,10 +5,11 @@ import RecipeList from './components/RecipeList';
 import Loader from './components/Loader';
 import RecipeDetail from './components/RecipeDetail';
 import { Routes, Route, Link } from 'react-router-dom';
+import ErrorMessage from './components/ErrorMessage';
 
 export default function App() {
   const [items, setItems] = useState([]);
-  const [filteredItems, setFilteredItems] = useState([]); // filtered results
+  const [filteredItems, setFilteredItems] = useState([]); 
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -17,7 +18,7 @@ export default function App() {
       .then(data => {
         const meals = data.meals || [];
         setItems(meals);
-        setFilteredItems(meals); // show all initially
+        setFilteredItems(meals); 
         setLoading(false);
       }).catch(err => {
         console.log('API fetch error');
@@ -25,13 +26,10 @@ export default function App() {
       });
   }, []);
 
-  // Search handler passed to SearchBar
   const handleSearch = (query) => {
     if (!query.trim()) {
-      // if empty search, show all items
       setFilteredItems(items);
     } else {
-      // filter by meal name, case insensitive
       const filtered = items.filter(item =>
         item.strMeal.toLowerCase().includes(query.toLowerCase())
       );
@@ -58,7 +56,7 @@ export default function App() {
               {filteredItems && filteredItems.length > 0 ? (
                 <RecipeList items={filteredItems} />
               ) : (
-                <p className="text-center text-gray-500">No recipes found 🍽️</p>
+                <ErrorMessage />
               )}
             </>
           )
