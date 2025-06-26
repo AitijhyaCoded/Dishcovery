@@ -1,7 +1,8 @@
 # 🍽️ Dishcovery
 
 Welcome to **Dishcovery**, a fun and fast recipe finder app! Search for delicious recipes by name and explore detailed cooking instructions, ingredients, and categories — all at your fingertips.
-Built with **React**, styled with **Tailwind CSS**, and powered by **TheMealDB API.**
+Built with **React**, styled with **Tailwind CSS**, and powered by **TheMealDB API.** 
+[_Try Dishcovery now_](https://dishcovery-kohl.vercel.app)
 
 ---
 
